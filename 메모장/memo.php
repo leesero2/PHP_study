@@ -7,14 +7,26 @@
     <title>메모장</title>
 </head>
 <body>
-    <div>
-        <table border = "1">
+    <form action = "memoSave.php">
+    <div style="text-align:center;">
+        <table border = "1" align = "center">
             <tr>
-                <td>
-</table>
-</div>    
+                <td>이름</td>
+                <td style="text-align:left;"><input type = "text" name = "name" > <td>
+            </tr>
+            <tr>
+                <td>이메일</td>
+                <td style="text-align:left;"><input type = "text" name = "email" > <td>
+            </tr>
+            <tr>
+                <td>내용</td>
+                <td><input type = "text" name = "memo" style="width:400px;"> <td>
+            </tr>
+        </table>
 
+        <input type ="submit" value="저장" style="margin-top:10px;">
 
-
+    </div>    
+</form>
 </body>
 </html>
