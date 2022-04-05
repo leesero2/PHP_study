@@ -31,6 +31,7 @@
 
 <table border = 1>
     <tr>
+        <th> No </th>
         <th> 이름 </th>
         <th> 이메일 </th>
         <th> 내용 </th>
@@ -41,18 +42,28 @@
 $list = file("memo.txt");
 
 //입력한 최근 메모가 제일 위로 올라가게 하고싶으면 array_reverse 함수를 이용하면됨
-
 $a = array_reverse($list); //$a 변수에 list 배열을 역으로 저장시킴 
+
+//각 메모에 번호를 매기려면 i라는 변수를 생성후 증감시키면됨
+$i = 1; //첫번째 내용을 1번으로 저장
+
 
 foreach($a as $d){ //foreach문으로 전부 출력을 함 (a를 d에 저장해서 출력을 함, a는 리버스라 거꾸로 출력이 됨)
     $data = explode("///",$d); // '///'을 기준으로 데이터를 나눔
+
+        
+
     ?>
     <tr>
+        <td> <?=$i?></td>
         <td> <?=$data[0]?> </td> 
         <td> <?=$data[1]?> </td>
         <td> <?=$data[2]?> </td>
         <td> <?=$data[3]?> </td>
     </tr>
-<? } ?>
+<?
+$i++; //계속 증감시킴 foreach문이라 내용만큼 반복하기에
+
+} ?>
 </body>
 </html>
