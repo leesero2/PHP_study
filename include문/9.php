@@ -14,6 +14,9 @@
 
 <?php
 //include는 말 그대로 include가 선언한 파일의 내용을 출력하는 함수
+//똑같은 함수로 require가 있음
+
+    //require "9_1.php"; - 이것도 include랑 기능은 똑같음
     include "9_1.php";
     ?>
 
@@ -22,6 +25,9 @@
 </div>
     <?php
     //include_once는 once뜻 그대로 첫번째만 실행시키고 그뒤론 안나옴
+    //require_once도 똑같음 
+
+    //require_once "9_1.php"; - 똑같음 
     include_once "9_1.php";
     ?>
 
