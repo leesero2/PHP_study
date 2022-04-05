@@ -31,5 +31,11 @@
     include_once "9_1.php";
     ?>
 
+    <!-- 그러면 include랑 require이랑 차이가 무엇이냐?
+    보통은 include보다 require가 더 엄격함
+    include는 파일이 없으면 워닝 에러만 발생시키지만 require는 더한 에러를 발생시킴
+    때문에 보통은 유연하게 사용하고싶다면 include를 사용하는게 좋음 -->
+
+
 </body>
 </html>
