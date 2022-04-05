@@ -1,7 +1,9 @@
 <?php
     $fp = fopen("memo.txt","a");
 
-    $content = $_REQUEST['name']."///".$_REQUEST['email']."///".$_REQUEST['memo']."\r\n";
+    $now = date("Y-m-d H:i:s"); // 이 메서드는 2022-04-05 이런식으로 들어감 뒤에 H:i:s는 초까지 기록이됨
+
+    $content = $_REQUEST['name']."///".$_REQUEST['email']."///".$_REQUEST['memo']."///".$now."\r\n";
     // "\r\n" - 줄바꾸기 기호
     //memo.txt에 저장되는 내용이 줄바꿈이되서 저장이 됨
 
