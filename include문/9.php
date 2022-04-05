@@ -13,7 +13,17 @@
 </div>
 
 <?php
+//include는 말 그대로 include가 선언한 파일의 내용을 출력하는 함수
     include "9_1.php";
     ?>
+
+    <div>
+        가끔 마주보고 웃었지 ~ 
+</div>
+    <?php
+    //include_once는 once뜻 그대로 첫번째만 실행시키고 그뒤론 안나옴
+    include_once "9_1.php";
+    ?>
+
 </body>
 </html>
