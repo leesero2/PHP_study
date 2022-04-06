@@ -7,7 +7,7 @@
 // (
 //     [name] => 스크린샷 2021-11-08 오후 8.15.25.png
 //     [type] => image/png
-//     [tmp_name] => /private/var/tmp/phpqTTpzu
+//     [tmp_name] => 이부분은 지움 혹시몰라서
 //     [error] => 0
 //     [size] => 407875 
 // )
