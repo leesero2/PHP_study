@@ -17,15 +17,27 @@
 
     $query = "select * from memo"; //메모 테이블을 선택 후 $query 변수에 저장
     
+    //데이터베이스 내용은 사진으로 첨부함
+
     $result = mysqli_query($connect,$query);
 
     //print_r($result); // 결과 - mysqli_result Object ( [current_field] => 0 [field_count] => 4 [lengths] => [num_rows] => 1 [type] => 0 )
     
-    $a = mysqli_fetch_assoc($result);
+    $a = mysqli_fetch_assoc($result); //데이터베이스 테이블안의 값을 배열로 전환해서 출력시켜주는 함수
     
-    echo $a[no];
-    echo $a[1];
-    echo $a[2];
-    echo $a[3];
+    print_r($a); //Array ( [No] => 1 [001] => 2 [002] => 3 [003] => 4 ) 1 첫번째 줄 데이터베이스 값이 출력됨
+
+    echo $a[No]; //배열안의 주소값은 테이블 이름을 넣어야함
+    echo $a[001];
+    echo $a[002];
+    echo $a[003];
+
+    echo "<hr>";
+
+    //데이터 값이 2줄이면 한번더 출력하면 됨
+    // echo $a[No];
+    // echo $a[001];
+    // echo $a[002];
+    // echo $a[003];
 
     // print_r($connect); 잘 되었는지 확인
