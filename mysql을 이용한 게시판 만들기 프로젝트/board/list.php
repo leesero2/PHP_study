@@ -29,7 +29,7 @@
     ?>
             <tr>
                 <td> <?=$data['idx']?> </td>
-                <td> <?=$data['subject']?> </td>
+                <td><a href="view.php?idx=<?=$data['idx']?>"><?=$data['subject']?></td>
                 <td> <?=$data['name']?> </td>
                 <td> <?=$data['regdate']?> </td>
         </tr>
