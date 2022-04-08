@@ -33,10 +33,11 @@
        
     </tr>
         <td colspan="2">
-            <div style="text-align:center;">
-                <input type ="submit" value="저장">
+            <a href="list.php">목록</a>
+            <div style = "float:right;">
+            <a href="del.php?idx=<?=$idx?>" onclick="return confirm('정말 삭제할까요?');">삭제</a>
+            <a href="write.php?idx=<?=$idx?>">수정</a>
             </div>
-        
         </td>
     </tr>
 </table>
