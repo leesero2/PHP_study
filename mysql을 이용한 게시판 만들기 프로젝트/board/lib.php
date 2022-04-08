@@ -1,6 +1,6 @@
 <?php
-    error_reporting(1);
-    ini_set("display_errors",1);
+    // error_reporting(1);
+    // ini_set("display_errors",1);
     //이렇게 작성하면 warning에러가 발생하지 않음
 
     $connect = mysqli_connect("localhost","korea","korea123","korea");
