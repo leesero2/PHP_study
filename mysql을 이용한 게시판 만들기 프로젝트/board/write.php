@@ -2,6 +2,8 @@
     include "lib.php";
 ?>
 
+<form action = "writePost.php" method="post">
+    <!-- 이번엔 post방식으로 데이터를 넒겨봄. get방식은 주소창에 데이터값이 다 보여서 해킹 위험이 있음 -->
 <table width = 800 border = "1" cellpadding=5>
     <tr>
         <td>이름</td>
@@ -25,3 +27,4 @@
         </td>
     </tr>
 </table>
+</form>
