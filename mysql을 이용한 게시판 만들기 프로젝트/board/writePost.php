@@ -18,12 +18,15 @@
 
     if($idx){ //수정부분(idx값이 있다면)
 
-        //pw가 같다면 게시글 삭제하는 소스
-        $query = "select * from sing_board where idx = '$idx' and pwd='$pwd' ";
+        //pw가 같다면 게시글 수정하는 소스
+        $query = "select * from sing_board where idx = '$idx' and pwd= '$pwd' "; //넘겨받은 idx값과 pwd값을 선택
         $result = mysqli_query($connect, $query);
         $data = mysqli_fetch_array($result);
-        
-
+        if(!$data['idx']){
+            echo "<script> alert('비밀번호가 일치하지 않습니다. 수정이 불가능합니다. '); history.back(1); </script> ";
+            //history.back(1);은 방금 전창으로 이동하는 메서드
+            exit;
+        }
 
 
         $query = "update sing_board set name='$name',subject='$subject',memo='$memo' where idx='$idx'";
@@ -32,7 +35,7 @@
         $regdate = date("Y-m-d H:i:s");
         $ip = $_SERVER['REMOTE_ADDR'];
 
-        $query = "insert into sing_board(name,subject,memo,regdate,ip, pwd) values('$name','$subject','$memo','$regdate','$ip','password('$pwd')' )";
+        $query = "insert into sing_board(name,subject,memo,regdate,ip, pwd) values('$name','$subject','$memo','$regdate','$ip','$pwd' )";
         //password('$pwd') 이렇게 암호화를 해야지 데이터베이스가 해킹당했을때 게시글 보호가 가능
 
         mysqli_query($connect,$query);
