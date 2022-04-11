@@ -6,6 +6,8 @@
     $name = mysqli_real_escape_string($connect, $idx);
     $pwd = mysqli_real_escape_string($connect, $pwd);
 
+
+    //비밀번호를 일치확인후 삭제하려는 소스
     $query = "select * from sing_board where idx = '$idx' and pwd= '$pwd' "; //넘겨받은 idx값과 pwd값을 선택
     $result = mysqli_query($connect, $query);
     $data = mysqli_fetch_array($result);
