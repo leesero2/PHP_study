@@ -27,6 +27,11 @@
         <th>내용</th>
         <td> <textarea name="memo" style="width:100%; height:300px;"><?=$data['memo']?></textarea></td>
     </tr>
+
+    <tr>
+        <th>비밀번호</th>
+        <td> <input type="password" name="pwd" placeholder="비밀번호" size=20></td>
+    </tr>
        
     </tr>
         <td colspan="2">

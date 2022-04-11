@@ -3,6 +3,7 @@
 
     $idx = $_GET['idx'];
     $idx = mysqli_real_escape_string($connect, $idx);
+    
     $query = "select * from sing_board where idx = '$idx' ";
     $result = mysqli_query($connect, $query);
     $data = mysqli_fetch_array($result);
