@@ -36,26 +36,23 @@
         <td colspan="2">
             <a href="list.php">목록</a>
             <div style = "float:right;">
-            <a href="#" onclick="chkPassword();">삭제</a> 
-            <!-- //삭제에 대한 함수 추가 -->
-            <a href="write.php?idx=<?=$idx?>">수정</a>
+                <a href="confirmDel.php?idx=<?=$idx?>">삭제</a> 
+                <!-- //삭제에 대한 함수 추가 -->
+                <a href="write.php?idx=<?=$idx?>">수정</a>
             </div>
-
-            <a href="list.php">목록</a>
         </td>
     </tr>
 </table>
 </form>
 
-<script>
+<!-- <script>
     //삭제하는 함수
     function chkPassword(){
         let a = prompt('비밀번호를 입력해 주세요.');
-        
-        if(a){
-            location.href='del.php?idx=<?=$idx?>$pwd='+a;
+        if(){
+            location.href='del.php?idx=<?=$idx?>$pwd=' + a;
         }else{
-            alert('비밀번호를 입력하지 않으면 수정이 불가능 합니다.')
+            alert('비밀번호를 입력하지 않으면 수정이 불가능 합니다.');
         }
     }
-</script>
+</script> -->

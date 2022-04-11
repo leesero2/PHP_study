@@ -22,6 +22,7 @@
         $query = "select * from sing_board where idx = '$idx' and pwd= '$pwd' "; //넘겨받은 idx값과 pwd값을 선택
         $result = mysqli_query($connect, $query);
         $data = mysqli_fetch_array($result);
+        
         if(!$data['idx']){
             echo "<script> alert('비밀번호가 일치하지 않습니다. 수정이 불가능합니다. '); history.back(1); </script> ";
             //history.back(1);은 방금 전창으로 이동하는 메서드
@@ -31,6 +32,7 @@
 
         $query = "update sing_board set name='$name',subject='$subject',memo='$memo' where idx='$idx'";
         mysqli_query($connect,$query);
+
     }else{//수정이 아닌 새글을 작성하는거라면(idx값이 없다면)
         $regdate = date("Y-m-d H:i:s");
         $ip = $_SERVER['REMOTE_ADDR'];
