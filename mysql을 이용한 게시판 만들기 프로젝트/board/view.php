@@ -3,7 +3,7 @@
 
     $idx = $_GET['idx'];
     $idx = mysqli_real_escape_string($connect, $idx);
-    
+
     $query = "select * from sing_board where idx = '$idx' ";
     $result = mysqli_query($connect, $query);
     $data = mysqli_fetch_array($result);
@@ -36,10 +36,26 @@
         <td colspan="2">
             <a href="list.php">목록</a>
             <div style = "float:right;">
-            <a href="del.php?idx=<?=$idx?>" onclick="return confirm('정말 삭제할까요?');">삭제</a>
+            <a href="#" onclick="chkPassword();">삭제</a> 
+            <!-- //삭제에 대한 함수 추가 -->
             <a href="write.php?idx=<?=$idx?>">수정</a>
             </div>
+
+            <a href="list.php">목록</a>
         </td>
     </tr>
 </table>
 </form>
+
+<script>
+    //삭제하는 함수
+    function chkPassword(){
+        let a = prompt('비밀번호를 입력해 주세요.');
+        
+        if(a){
+            location.href='del.php?idx=<?=$idx?>$pwd='+a;
+        }else{
+            alert('비밀번호를 입력하지 않으면 수정이 불가능 합니다.')
+        }
+    }
+</script>
