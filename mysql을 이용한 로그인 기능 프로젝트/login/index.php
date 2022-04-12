@@ -7,14 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    로그인 테스트
-    <?php
-        $a = 100;
-    ?>
+    <form action = "loginProc.php" method="post">
+        <input type = "text" name = "user_id" placeholder = "아이디" ><br>
+        <input type = "password" name = "pwd" placeholder = "비밀번호" ><br>
+        <button type = "submit">로그인</button>
+    </form>
 
-    <a href="text.php?a=200">페이지 이동</a> <?=$a?> <br>
-    <a href="1.php">쿠키생성</a> <br>
-    <a href="2.php">쿠키출력</a> <br>
-    <a href="3.php">쿠키출력</a> <br>
 </body>
 </html>
