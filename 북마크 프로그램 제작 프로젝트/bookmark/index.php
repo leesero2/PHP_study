@@ -27,7 +27,7 @@
             <td><a href="<?=$data['url']?>" target="_blank"> <?=$data['url']?> </a> 
             <!-- 링크를 들어갈수있게끔 구현 -->
             <td><?=$data['regdate']?>
-            <td>삭제
+            <td><a href="del.php?idx=<?=$data['idx']?>" onclick="return confirm('정말 삭제할까요?');" >삭제</a>
         </tr>
     <?php } ?>
 </table>
