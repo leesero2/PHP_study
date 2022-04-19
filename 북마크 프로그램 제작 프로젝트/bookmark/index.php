@@ -14,6 +14,7 @@
     <tr>
         <th>idx</th>
         <th>북마크</th>
+        <th>등록일</th>
         <th>삭제</th>
     </tr>
     <?php
@@ -23,8 +24,11 @@
         ?>
         <tr>
             <td><?=$data['idx']?>
-            <td><?=$data['url']?>
+            <td><a href="<?=$data['url']?>" target="_blank"> <?=$data['url']?> </a> 
+            <!-- 링크를 들어갈수있게끔 구현 -->
             <td><?=$data['regdate']?>
+            <td>삭제
+        </tr>
     <?php } ?>
 </table>
 <a href="add.php">북마크 추가</a>
