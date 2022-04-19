@@ -2,7 +2,7 @@
     include "lib.php";
 
     $memo = $_POST['memo'];
-    $memo = mysqli_real_escape_string($connect, $idx);
+    $memo = mysqli_real_escape_string($connect, $memo);
 
     //print_r($_POST);
 
@@ -18,3 +18,5 @@
         $query = "insert into bookmark(url, regdate) values('$url',now())";
         mysqli_query($connect,$query);
     }
+
+Header("Loaction: index.php"); //index화면으로 돌아가는 소스
