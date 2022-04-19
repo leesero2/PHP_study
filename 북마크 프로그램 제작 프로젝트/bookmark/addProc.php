@@ -13,6 +13,9 @@
     // echo $list[0];
 
     foreach($list as $url){
+        $url = trim($url);
+        if(!$url) continue; //공백부분 처리 소스, 값이 있는 부분만 처리 하게끔
+
         echo "<li>";
         echo $url;
         $query = "insert into bookmark(url, regdate) values('$url',now())";
