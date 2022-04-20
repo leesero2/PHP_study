@@ -27,4 +27,8 @@
     $_SESSION['isLoginId'] = $user_id; 
     
     // Header("Location: index.php"); 
+    
 ?>
+<script>
+    location.href='index.php';
+</script>
